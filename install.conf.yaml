@@ -15,7 +15,7 @@
 
     ~/.zshrc:
       force: true
-      path: zshrc
+      path: zsh/zshrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
