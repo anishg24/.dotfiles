@@ -1,8 +1,15 @@
 = Anish's Dotfiles
 Anish Govind <anish@anishgovind.com>
-v1.0, 2024-03-13
+v1.1, 2024-03-13
 :toc:
 :homepage: https://anishgovind.com
+
+*To Dos*
+
+* [ ] Segment `+zshrc+` into chunks specific to my laptop
+* [ ] Bake my zsh configuration
+* [ ] Bake my tmux configuration
+* [ ] Bake my nvim configuration
 
 == Installation
 
@@ -11,6 +18,25 @@ v1.0, 2024-03-13
 git clone https://github.com/anishg24/.dotfiles ~/.dotfiles
 cd ~/.dotfiles
 ./install
+----
+
+== Executables
+
+The following executables can be installed to `+~/.dotfiles/bin/+` and sourced
+by `+~/.zshrc+`:
+
+* nvim
+* fzf
+* zoxide
+* lsd
+* bat
+
+To install these executables, I assume you're on an x86 GNU/Linux OS, then you can
+run:
+
+[,bash]
+----
+~/.dotfiles/scripts/install/install.sh <exe_name>
 ----
 
 == Docker
@@ -25,9 +51,3 @@ executables) and cleanup any dead symlinks in case there's an issue.
 
 On top of all of this, https://github.com/anishathalye/dotbot[dotbot] is incredibly portable
 and bootstraps itself, making it desirable for use across multiple systems.
-
-=== Dotbot Config
-[,yaml]
-----
-include::install.conf.yaml[]
-----
