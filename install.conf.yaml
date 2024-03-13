@@ -2,13 +2,20 @@
     link:
       relink: true
 
-- clean: ['~']
+- clean: ['~', '~/.config']
 
 - link:
     ~/.config/:
       glob: true
       force: true
       path: config/*
+
+    ~/.tmux.conf:
+      path: tmux/tmux.conf
+
+    ~/.zshrc:
+      force: true
+      path: zshrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
