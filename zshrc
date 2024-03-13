@@ -26,7 +26,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 export GPG_TTY=$(tty)
 
-source /usr/share/zsh/share/antigen.zsh
+source ~/.dotfiles/antigen.zsh
 
 antigen use oh-my-zsh
 
