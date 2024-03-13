@@ -1,0 +1,33 @@
+= Anish's Dotfiles
+Anish Govind <anish@anishgovind.com>
+v1.0, 2024-03-13
+:toc:
+:homepage: https://anishgovind.com
+
+== Installation
+
+[,bash]
+----
+git clone https://github.com/anishg24/.dotfiles ~/.dotfiles
+cd ~/.dotfiles
+./install
+----
+
+== Docker
+
+A Docker container containing my command-line dotfile changes is planned to be developed.
+
+== Modifications
+
+This repository uses https://github.com/anishathalye/dotbot[dotbot] which not only generates
+symlinks but also can run arbitrary shell commands to setup more things (like installing 
+executables) and cleanup any dead symlinks in case there's an issue. 
+
+On top of all of this, https://github.com/anishathalye/dotbot[dotbot] is incredibly portable
+and bootstraps itself, making it desirable for use across multiple systems.
+
+=== Dotbot Config
+[,yaml]
+----
+include::install.conf.yaml[]
+----
