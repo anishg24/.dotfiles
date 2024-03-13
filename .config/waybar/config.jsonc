@@ -1,0 +1,8 @@
+{
+	"layer": "top",
+	"modules-left": ["custom/launcher","cpu","memory","keyboard-state","tray"],
+	"modules-center": ["hyprland/workspaces"],
+	"modules-right": ["idle_inhibitor","backlight","pulseaudio","network","clock","battery","custom/power"],
+
+  "include": ["/home/anish/.config/waybar/modules.jsonc"]
+}

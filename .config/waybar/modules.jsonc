@@ -1,0 +1,115 @@
+{
+  "pulseaudio": {
+    "tooltip": false,
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 {volume}%",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click": "pavucontrol",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "on-click": "activate",
+    "format": "{icon} | {windows}",
+    "window-rewrite-default": "",
+    "format-window-separator": " ",
+    "window-rewrite": {
+      "class<alacritty>": "",
+      "class<steam>": "",
+      "class<Brave-browser>": "",
+      "class<Brave-browser> title<.*github.*>": "",
+      "class<WebCord>": "",
+      "class<Signal>": "",
+      "class<zoom>": ""
+    }
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+        "activated": "",
+        "deactivated": ""
+    }
+  },
+  "network": {
+    "tooltip": false,
+    "format-wifi": "  {essid}",
+    "format-ethernet": "󰈀 {ipaddr}"
+  },
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": {
+      "numlock": "N {icon}",
+      "capslock": "C {icon}"
+    },
+    "format-icons": {
+      "locked": " ",
+      "unlocked": " "
+    }
+  },
+  "backlight": {
+    "tooltip": false,
+    "format": " {}%",
+    "interval": 1,
+    "on-scroll-up": "brightnessctl set +5%",
+    "on-scroll-down": "brightnessctl set 5%-"
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon}  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  },
+  "clock": {
+    "format": "{:%I:%M %p | %m/%d/%Y}"
+  },
+  "cpu": {
+    "interval": 15,
+    "format": " {}%",
+    "max-length": 10
+  },
+  "memory": {
+    "interval": 30,
+    "format": " {}%",
+    "max-length": 10
+  },
+  "custom/launcher": {
+    "format": "󰣇 ",
+    "on-click": "rofi -show drun",
+    "on-click-right": "killall rofi"
+  },
+  "custom/power": {
+    "format": " ",
+    "on-click": "wlogout"
+  },
+  "custom/updates": {
+    "format": "{} Update(s)",
+    "exec": "checkupdates | wc -l",
+    "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
+    "interval": 15,
+    "on-click": "alacritty -e paru -Syu && notify-send 'The system has been updated' "
+  }
+}
