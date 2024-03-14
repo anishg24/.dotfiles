@@ -1,15 +1,14 @@
 = Anish's Dotfiles
 Anish Govind <anish@anishgovind.com>
-v1.1, 2024-03-13
+v1.2, 2024-03-13
 :toc:
 :homepage: https://anishgovind.com
 
 *To Dos*
 
-* [ ] Segment `+zshrc+` into chunks specific to my laptop
-* [ ] Bake my zsh configuration
-* [ ] Bake my tmux configuration
-* [ ] Bake my nvim configuration
+* Bake my zsh configuration
+* Bake my tmux configuration
+* Bake my nvim configuration
 
 == Installation
 
