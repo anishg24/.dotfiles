@@ -59,3 +59,5 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # Run code after setting up oh-my-zsh
 source ~/.dotfiles/config/zshrc/$(hostname)/env.sh 1
+
+export QSYS_ROOTDIR="/home/anish/.cache/paru/clone/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/23.1/quartus/sopc_builder/bin"

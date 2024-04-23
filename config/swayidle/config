@@ -1,3 +1,4 @@
-timeout 1800 'swaylock -f'
+timeout 1800 'pidof hyprlock || hyprlock'
 timeout 1805 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'
-before-sleep 'swaylock -f'
+after-resume 'hyprctl keyword monitor "eDP-2,3840x2160@144,0x0,2"'
+before-sleep 'pidof hyprlock || hyprlock'
