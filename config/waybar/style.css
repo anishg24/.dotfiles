@@ -1,73 +1,17 @@
 * {
-	border: none;
-	border-radius: 10px;
-  font-family: "JetBrains Mono", "Font Awesome 6 Free" ;
-	font-size: 15px;
+  font-family: "SF Pro Display", "Font Awesome 6 Free" ;
+	font-size: 16px;
 	min-height: 10px;
+	color: #c0caf5;
+  background: transparent;
 }
 
 window#waybar {
-	background: transparent;
+	background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
 }
 
-window#waybar.hidden {
-	opacity: 0.2;
-}
-
-#window {
-	margin-top: 6px;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 10px;
-	transition: none;
-    color: transparent;
-	background: transparent;
-}
-#tags {
-	margin-top: 6px;
-	margin-left: 12px;
-	font-size: 4px;
-	margin-bottom: 0px;
-	border-radius: 10px;
-	background: #161320;
-	transition: none;
-}
-
-#tags button {
-	transition: none;
-	color: #B5E8E0;
-	background: transparent;
-	font-size: 16px;
-	border-radius: 2px;
-}
-
-#tags button.occupied {
-	transition: none;
-	color: #F28FAD;
-	background: transparent;
-	font-size: 4px;
-}
-
-#tags button.focused {
-	color: #ABE9B3;
-    border-top: 2px solid #ABE9B3;
-    border-bottom: 2px solid #ABE9B3;
-}
-
-#tags button:hover {
-	transition: none;
-	box-shadow: inherit;
-	text-shadow: inherit;
-	color: #FAE3B0;
-    border-color: #E8A2AF;
-    color: #E8A2AF;
-}
-
-#tags button.focused:hover {
-    color: #E8A2AF;
-}
-
-#network,
+/* #network, */
 #keyboard-state,
 #pulseaudio,
 #backlight,
@@ -75,56 +19,52 @@ window#waybar.hidden {
 #memory,
 #cpu,
 #battery,
-#custom-power,
+#custom-symbol,
+#custom-network-symbol,
 #privacy,
 #tray,
-#idle_inhibitor
+#idle_inhibitor,
+#workspaces button,
+#workspaces button.active
 {
-	margin-top: 6px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 0px;
-	border-radius: 10px;
+  margin: 5px;
+	border-radius: 3px;
 	transition: none;
-	color: #c0caf5;
-	background: #292e42;
+  border-bottom: 3px solid #c0caf5;
+}
+
+/* #network:hover, */
+#keyboard-state:hover,
+#pulseaudio:hover,
+#backlight:hover,
+#clock:hover,
+#memory:hover,
+#cpu:hover,
+#custom-symbol:hover,
+#custom-network-symbol:hover,
+#privacy:hover,
+#tray:hover,
+#idle_inhibitor:hover,
+#workspaces button:hover
+{
+  border-bottom: 3px solid #0dd2e7;
 }
 
 #battery.charging, #battery.plugged {
-	color: #24283b;
-  background-color: #c3e88d;
+  color: #c3e88d;
+  border-bottom: 3px solid #c3e88d;
 }
 
 #battery.critical:not(.charging) {
-  background-color: #ff757f;
-  color: #c0caf5;
+  color: #ff757f;
+  border-bottom: 3px solid #ff757f;
 }
 
-#custom-launcher {
-	font-size: 24px;
-	margin-top: 6px;
-	margin-left: 8px;
-	padding-left: 10px;
-	padding-right: 5px;
-	border-radius: 10px;
-	transition: none;
-  color: #89DCEB;
-  background: #24283b;
+#workspaces button.active
+#workspaces button.focus
+{
+  outline: none;
+  color: #0dd2e7;
+  text-shadow: none;
 }
 
-#workspaces button {
-  background-color: #24283b;
-  color: #c0caf5;
-  margin: 0.25em;
-}
-
-#workspaces button.active {
-  color: #89DCEB;
-}
-
-#workspaces button.urgent {
-  background-color: #ff757f;
-  border-radius: 1em;
-  color: #24283b;
-}

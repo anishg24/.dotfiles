@@ -8,6 +8,7 @@ then
   export PATH="$HOME/Tools/xilinx/Vivado/2023.1/bin:$PATH"
   export PATH="$PATH:/home/anish/.local/bin"
   export PATH="$PATH:/home/anish/.local/share/gem/ruby/3.0.0/bin"
+  export PATH="$PATH:/home/anish/.platformio/penv/bin"
 
   if use_auto_tmux
   then

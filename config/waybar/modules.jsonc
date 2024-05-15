@@ -14,22 +14,6 @@
       ]
     }
   },
-  "hyprland/workspaces": {
-    "disable-scroll": true,
-    "on-click": "activate",
-    "format": "{icon} | {windows}",
-    "window-rewrite-default": "",
-    "format-window-separator": " ",
-    "window-rewrite": {
-      "class<alacritty>": "",
-      "class<steam>": "",
-      "class<Brave-browser>": "",
-      "class<Brave-browser> title<.*github.*>": "",
-      "class<WebCord>": "",
-      "class<Signal>": "",
-      "class<zoom>": ""
-    }
-  },
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
@@ -37,10 +21,27 @@
         "deactivated": ""
     }
   },
+  "custom/network-symbol": {
+    "format": "  ",
+    "tooltip": false,
+    "on-click": "nm-connection-editor"
+    // "exec": "~/.dotfiles/scripts/serval/network_symbol.sh",
+    // "interval": 60
+  },
+  "group/networks": {
+    "orientation": "inherit",
+    "drawer": {
+      "children-class": "drawer-network"
+    },
+    "modules": [
+      "custom/network-symbol",
+      "network"
+    ]
+  },
   "network": {
     "tooltip": false,
-    "format-wifi": "  {essid}",
-    "format-ethernet": "󰈀 {ipaddr}"
+    "format-wifi": "{ipaddr} ({essid})",
+    "format-ethernet": "{ipaddr}"
   },
   "keyboard-state": {
     "numlock": true,
@@ -96,20 +97,41 @@
     "format": " {}%",
     "max-length": 10
   },
-  "custom/launcher": {
-    "format": "󰣇 ",
-    "on-click": "rofi -show drun",
-    "on-click-right": "killall rofi"
+  "custom/symbol": {
+    "format": " 󰣇 ",
+    "tooltip": false
+    // "on-click": "rofi -show drun",
+    // "on-click-right": "killall rofi"
   },
-  "custom/power": {
-    "format": " ",
-    "on-click": "wlogout"
+  "group/workspaces": {
+    "orientation": "inherit",
+    "drawer": {
+      "children-class": "drawer-workspace"
+    },
+    "modules": [
+      "custom/symbol",
+      "hyprland/workspaces"
+    ]
   },
-  "custom/updates": {
-    "format": "{} Update(s)",
-    "exec": "checkupdates | wc -l",
-    "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
-    "interval": 15,
-    "on-click": "alacritty -e paru -Syu && notify-send 'The system has been updated' "
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "active-only": true,
+    // "all-outputs": true,
+    // "on-click": "activate",
+    // "format": "{icon} | {windows}",
+    "format": "{name} [ {windows} ]",
+    "window-rewrite-default": "",
+    "format-window-separator": " ",
+    "window-rewrite": {
+      "class<alacritty>": "",
+      "class<foot>": "",
+      "class<zathura>": "",
+      "class<steam>": "",
+      "class<Brave-browser>": "",
+      // "class<Brave-browser> title<.*github.*>": "",
+      "class<WebCord>": "",
+      "class<Signal>": "",
+      "class<zoom>": ""
+    }
   }
 }
